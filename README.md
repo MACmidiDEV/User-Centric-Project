@@ -1,6 +1,8 @@
 # User-Centric-Project
 User Centric Frontend Development Milestone Project
-- Miguel Camacho
+```
+Miguel Camacho
+```
 
 ## Overview
  
