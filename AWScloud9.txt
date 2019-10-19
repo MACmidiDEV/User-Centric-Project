@@ -1,1 +1,6 @@
-test
+SEND MEto GIThub. .. ... 
+
+EC2 default User -FIX
+     git config --global user.name "MACmidiDev"
+     git config --global user.email "macmidi.webdesigns@gmail.com"
+     

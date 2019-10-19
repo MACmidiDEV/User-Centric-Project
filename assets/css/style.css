@@ -1,2 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap');
 
+header {
+    margin: 0;
+}
+
+.IMGcontainer {
+   
+}
+
+.myNavbar {
+    margin-top: 15px;
+}
+
+body {
+    
+}
+
+navbar navbar-inverse {
+    margin-top: 15px;
+}
+
+.fixme {
+    margin-top: 15px;   
+}
+
+/* Selects any <a> that is being activated */
+a:active {
+  margin-top: 15px;
+}
