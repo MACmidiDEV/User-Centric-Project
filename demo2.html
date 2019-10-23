@@ -4,60 +4,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
 }
 
-#myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: red;
+.hero-image {
+  background-image: url("https://cdn.img.com/joyent.wme/public/wme/assets/ec050984-7b81-11e6-96e0-8905cd656caf.jpg?v=13");
+  
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
-}
-
-#myBtn:hover {
-  background-color: #555;
 }
 </style>
 </head>
 <body>
 
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:50px">I am Jane Doe</h1>
+    <h3>And I'm a Photographer</h3>
+    <button>Hire me</button>
+  </div>
+</div>
 
-<div style="background-color:black;color:white;padding:30px">Scroll Down</div>
-<div style="background-color:lightgrey;padding:30px 30px 2500px">This example demonstrates how to create a "scroll to top" button that becomes visible 
-  <strong>when the user starts to scroll the page</strong>.</div>
-
-<script>
-//Get the button
-var mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-</script>
+<p>Page content..</p>
+<p>Note that this technique will also make the image responsive: Resize the browser window to see the effect.</p>
 
 </body>
 </html>

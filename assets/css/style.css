@@ -1,30 +1,351 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap');
 
-header {
-    margin: 0;
-}
-
-.IMGcontainer {
-   
-}
-
-.myNavbar {
-    margin-top: 15px;
-}
 
 body {
+    margin: 50;
+    font-size: 28px;
+    font-family: Raleway;
     
 }
 
-navbar navbar-inverse {
+h5 {
+    background-color: silver;
+}
+
+/*----------------- Header -----------*/
+
+
+.header {
+    /* 
+    
+     background-attachment: fixed;
+    background-image: url('../images/background.png');
+    
+    background-color: #f1f1f1;  
+    background-image: url("assets/images/background.png");
+    
+     background-image: url("https://backgrounddownload.com/wp-content/uploads/2018/09/web-developer-background-images.jpg");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+    
+    */
+    background-image: url("https://cdn.img.com/joyent.wme/public/wme/assets/ec050984-7b81-11e6-96e0-8905cd656caf.jpg?v=13");
+    background-image: url("https://backgrounddownload.com/wp-content/uploads/2018/09/web-developer-background-images.jpg");
+
+
+
+    background-color: #cccccc;
+    height: 381px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 10px;
+    text-align: center;
+
+    padding-top: 100px;
+}
+
+
+#mainHeadder,
+h2 {
+    background-color: silver;
+}
+
+#mainHeadder,
+p {
+    background-color: silver;
+}
+
+/*----------------- StickyNavagition -----------*/
+
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+#navbar a {
+    font-family: Oswald;
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#navbar a:hover {
+    background-color: #4CAF50;
+    color: black;
+}
+
+#navbar a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.content {
+    padding: 16px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky+.content {
+    padding-top: 60px;
+}
+
+
+/*----------------- Index_Footer -----------*/
+
+
+
+footer {
+    background-color: #525252;
+    color: #fafafa;
+    min-height: 120px;
+    margin: 0;
+}
+
+.cv-pdf i {
+    font-size: 18px;
+    color: #fafafa;
+    text-align: center;
+    padding-left: 5px;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.cv-pdf i:hover {
+    color: #e84610;
+}
+
+.social-links {
+    padding-bottom: 15px;
+}
+
+.social-links li a i {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 7px;
+    text-align: center;
+    color: white;
+    background: #8f8f8f;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover {
+    background: #4CAF50;
+}
+
+
+
+#footer-details {
+    padding: 20px;
+}
+
+
+
+/*----------------- Index_About -----------*/
+
+
+.aboutSEC {
+
+    
+    
+}
+
+
+/*----------------- IndexSkills_Section -----------*/
+
+.skillsSEC {
+
+    padding-top: 50px;
+}
+
+/*-------------------------------- WorkPAGE -------------------*/
+
+.iPad {
+    height: 500px;
+    background-color: silver;
+    
+}
+
+.resume {
+    margin-top: 100px;
+}
+
+.resume : p {
+    margin-top: 100px;
+    padding-top: 150px;
+}
+
+.resume.col-sm-12 {
+    margin-top: 150px;
+}
+
+.resume-DL i {
+    font-size: 150px;
+    color: #4CAF50;
+    text-align: center;
+    padding-left: 5px;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.resume-DL i:hover {
+    color: silver;
+    
+}
+
+/*-------------------------------- ContactPAGE_FORM -----------*/
+
+
+
+#ContactHead {
+    
+    
+    background-image: url("https://backgrounddownload.com/wp-content/uploads/2018/09/web-developer-background-images.jpg");
+    
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: 80%;
+    
+    padding: 10px;
+    text-align: center;
+
+    padding-top: 90px;
+}
+
+.contact-heading {
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    margin-top: 225px;
+    margin-bottom: 20px;
+    background-color: silver;
+}
+
+.center-form {
+    padding-top: 10px;
+    margin: 0 auto;
+    max-width: 70%;
+    
+}
+
+button[type="submit"] {
+    margin: 0 auto;
     margin-top: 15px;
+    margin-bottom: 20px;
+
+    color: black;
+    background-color: #4CAF50;
+    font-size: 20px;
+
+    transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    
+    
+
+
 }
 
-.fixme {
-    margin-top: 15px;   
+#bsend button:hover {
+
+    background-color: green;
+    color: white;
+
+    transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
 }
 
-/* Selects any <a> that is being activated */
-a:active {
-  margin-top: 15px;
+#bsend button.active {
+
+    background-color: black;
+    color: white;
+
+    transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+
 }
+
+
+/*----------------- MediaQueries -----------*/
+
+@media(min-width:992px) {
+    .center-form {
+        padding-top: 30px;
+        min-height:375px;
+        margin: 0 auto;
+        max-width: 50%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
