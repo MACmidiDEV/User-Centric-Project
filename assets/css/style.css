@@ -168,6 +168,18 @@ footer {
 .aboutSEC {
 
     
+    background-image: url("https://backgrounddownload.com/wp-content/uploads/2018/09/web-developer-background-images.jpg");
+    
+    background-color: #cccccc;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    position: relative;
+    padding: 10px;
+    text-align: center;
+
+    padding-top: 10px;
     
 }
 
