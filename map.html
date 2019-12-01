@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    
+    <title>Interactive Map</title>
+    
+     <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      #fill {
+          background-color:red;
+          height:3%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        background-color: black;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #floating-panel {
+          width:100%;
+          background-color: red;
+      }
+      #address {
+          width : 85%;
+          
+      }
+      #submit {
+          
+      }
+     
+      
+      
+    </style>
+  </head>
+  <body>
+     
+     
+     
+    <div id="map" style="width: 50%; height: 100%;float:left"></div>
+    <div id="pano" style="width: 50%; height: 100%;float:right"></div>
+    
+    <div id="floating-panel">
+      <input id="address" type="textbox" value="Providence, RI">
+      <input id="submit" type="button" value="Geocode">
+    </div>
+   
+    <div>
+        
+    </div>
+    
+    
+     <div id="floating-panel">
+      <input id="address" type="textbox" value="Sydney, NSW">
+      <input id="submit" type="button" value="Geocode">
+    </div>
+    <div id="map"></div>
+    
+    <div>
+      <div id="right-panel">
+      <p>Query suggestions for 'pizza near Syd':</p>
+      <ul id="results"></ul>
+    </div>
+    
+    </div> 
+
+    
+    
+    
+    <script>
+      /*
+       * Click the map to set a new location for the Street View camera.
+       */
+
+      var map;
+      var panorama;
+
+      function initMap() {
+        var prov = {lat:  41.8224416, lng: -71.4167204};
+        var sv = new google.maps.StreetViewService();
+
+        panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'));
+
+        // Set up the map.
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: prov,
+          zoom: 16,
+          streetViewControl: false
+        });
+
+        // Set the initial Street View camera to the center of the map
+        sv.getPanorama({location: prov, radius: 50}, processSVData);
+
+        // Look for a nearby Street View panorama when the map is clicked.
+        // getPanorama will return the nearest pano when the given
+        // radius is 50 meters or less.
+        map.addListener('click', function(event) {
+          sv.getPanorama({location: event.latLng, radius: 50}, processSVData);
+        });
+      }
+      
+        function geocodeAddress(geocoder, resultsMap) {
+        var address = document.getElementById('address').value;
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === 'OK') {
+            resultsMap.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+              map: resultsMap,
+              position: results[0].geometry.location
+            });
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+      }
+
+      function processSVData(data, status) {
+        if (status === 'OK') {
+          var marker = new google.maps.Marker({
+            position: data.location.latLng,
+            map: map,
+            title: data.location.description
+          });
+
+          panorama.setPano(data.location.pano);
+          panorama.setPov({
+            heading: 270,
+            pitch: 0
+          });
+          panorama.setVisible(true);
+
+          marker.addListener('click', function() {
+            var markerPanoID = data.location.pano;
+            // Set the Pano to use the passed panoID.
+            panorama.setPano(markerPanoID);
+            panorama.setPov({
+              heading: 270,
+              pitch: 0
+            });
+            panorama.setVisible(true);
+          });
+        } else {
+          console.error('Street View data not found for this location.');
+        }
+      }
+    </script>
+   <script async defer                              
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKJHlCqiGmPA5Rqlw6FW3t_BJrk4rSkoE&callback=initMap">
+    </script>
+  </body>
+</html>
+    
+    
+    
+  <!--  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>-->
+    <script async defer                              
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKJHlCqiGmPA5Rqlw6FW3t_BJrk4rSkoE&callback=initMap">
+    </script>
+  </body>
+</html>

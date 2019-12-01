@@ -5,15 +5,21 @@ body {
     margin: 50;
     font-size: 28px;
     font-family: Raleway;
-    
+    background-color: black;
+
+}
+
+h6 {
+    font-size: 12px;
 }
 
 h5 {
     background-color: silver;
 }
 
-/*----------------- Header -----------*/
+/* #start ------------------------------------ LandingPage ** index.1.html ** -----------*/
 
+/*----------------- LandingHeader -----------*/
 
 .header {
     /* 
@@ -37,9 +43,8 @@ h5 {
     background-image: url("https://backgrounddownload.com/wp-content/uploads/2018/09/web-developer-background-images.jpg");
 
 
-
     background-color: #cccccc;
-    height: 381px;
+    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -47,18 +52,29 @@ h5 {
     padding: 10px;
     text-align: center;
 
-    padding-top: 100px;
+    padding-top: 75px;
 }
+
 
 
 #mainHeadder,
 h2 {
-    background-color: silver;
+   background: linear-gradient(to right, rgba(0,0,0,0),  green);/*adds transparency from left to right*/
 }
 
 #mainHeadder,
 p {
-    background-color: silver;
+ background: linear-gradient(to right, rgba(0,0,0,0),  green);/*adds transparency from left to right*/
+}
+
+.tr {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), green);
+    /*adds transparency from left to right*/
+}
+
+.tl {
+    background: linear-gradient(to left, #ff4000 1%, #40ff00 60%, #0040ff 100%);
+    /*applys multiple gradient colours*/
 }
 
 /*----------------- StickyNavagition -----------*/
@@ -104,9 +120,45 @@ p {
 }
 
 
-/*----------------- Index_Footer -----------*/
 
 
+
+
+
+
+
+
+#ending {
+    display: flex;
+    /*set as a flex container*/
+    flex-direction: column;
+    /*mobile first approach*/
+    justify-content: center;
+    /* for the crox axis alignment*/
+    align-items: center;
+    /* for the main axis alignment*/
+    margin-top:200px;
+}
+
+#ending-message {
+    text-align: center;
+    font-family: Raleway;
+    font-size: 50px;
+    margin: 30px 20px;
+
+}
+
+#ending-graphic {
+    border-radius: 50%;
+}
+
+#ending-image {
+    border-radius: 50%;
+    opacity: 0.9;
+}
+
+
+/*----------------- Landing_Footer -----------*/
 
 footer {
     background-color: #525252;
@@ -131,13 +183,14 @@ footer {
 }
 
 .social-links {
+    padding-top: 10px;
     padding-bottom: 15px;
 }
 
 .social-links li a i {
     width: 32px;
     height: 32px;
-    padding: 12px 0;
+    padding: 14px 0;
     border-radius: 50%;
     font-size: 13px;
     line-height: 7px;
@@ -154,56 +207,84 @@ footer {
     background: #4CAF50;
 }
 
-
-
 #footer-details {
-    padding: 20px;
+    padding: 40px;
+
+}
+
+/*----------------- Landing-Silde_Section -----------*/
+
+#carouselExampleIndicators {
+    height: 65vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-item {
+    height: 65vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 
+#lapse {}
 
-/*----------------- Index_About -----------*/
+/*----------------- Landing-About_Section -----------*/
 
+.aboutSec {
 
-.aboutSEC {
-
-    
-    background-image: url("https://backgrounddownload.com/wp-content/uploads/2018/09/web-developer-background-images.jpg");
-    
-    background-color: #cccccc;
-    height: 250px;
+    background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1920x1080');
+    height: 80vh;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 40%;
+    background-size: 100%;
     position: relative;
     padding: 10px;
     text-align: center;
 
     padding-top: 10px;
-    
+
 }
 
 
-/*----------------- IndexSkills_Section -----------*/
+/*----------------- LandingSkills_Section -----------*/
 
 .skillsSEC {
 
-    padding-top: 50px;
+
+    padding-top: 5px;
+    text-align: center;
+    width: 70%;
 }
 
-/*-------------------------------- WorkPAGE -------------------*/
+
+
+
+/* ##end ----------------------------------------------- LandingPage ** index.1.html ** -----------*/
+
+/* #start --------------------------------------- WorkPage ** work.html ** -----------*/
+
+/*------------------------------------------------------- WorkPAGE -------------------*/
 
 .iPad {
-    height: 500px;
+    height: 100px;
     background-color: silver;
-    
+
 }
 
 .resume {
     margin-top: 100px;
 }
 
-.resume : p {
+.resume: p {
     margin-top: 100px;
     padding-top: 150px;
 }
@@ -225,24 +306,26 @@ footer {
 
 .resume-DL i:hover {
     color: silver;
-    
+
 }
 
-/*-------------------------------- ContactPAGE_FORM -----------*/
+/* ##end ---------------------------------------- WorkPage ** work.html ** -----------*/
 
+/*--------------------------      ContactPage ** contact.html ** ---------------------*/
 
+/*#start --------------------                ContactPAGE_FORM --------------------*/
 
 #ContactHead {
-    
-    
+
+
     background-image: url("https://backgrounddownload.com/wp-content/uploads/2018/09/web-developer-background-images.jpg");
-    
+
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: 80%;
-    
+
     padding: 10px;
     text-align: center;
 
@@ -260,14 +343,15 @@ footer {
 .center-form {
     padding-top: 10px;
     margin: 0 auto;
-    max-width: 70%;
-    
+    max-width: 60%;
+
 }
 
 button[type="submit"] {
     margin: 0 auto;
     margin-top: 15px;
     margin-bottom: 20px;
+
 
     color: black;
     background-color: #4CAF50;
@@ -277,8 +361,8 @@ button[type="submit"] {
     -o-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
-    
-    
+
+
 
 
 }
@@ -306,15 +390,60 @@ button[type="submit"] {
 
 }
 
+/* ##end --------------------------------- ContactPage ** contact.html ** -----------*/
 
 /*----------------- MediaQueries -----------*/
 
-@media(min-width:992px) {
+
+
+@media (min-width: 499px) {
+    .ending-graphic {
+        margin-top: 30px;
+    }
+    .lead {
+        text-align:left
+    }
+}
+
+
+@media screen and (min-width: 700px) {
+    /* LogoEnding */
+    #ending {
+
+        flex-direction: row;
+        /* across screen for dexktop screen size*/
+        width: 80%;
+        margin: 200px auto;
+
+    }
+    
+    .lead {
+        font-size: 20px
+    }
+    .display-4 {
+        text-align:left;
+        font-size: 100px;
+    }
+}
+
+
+
+
+@media (min-width: 992px) {
     .center-form {
         padding-top: 30px;
-        min-height:375px;
-        margin: 0 auto;
-        max-width: 50%;
+        min-height: 575px;
+        width: 80%;
+    }
+}
+
+
+@media (min-width: 4000px) {
+    .center-form {
+        padding-top: 30px;
+        min-height: 575px;
+        margin: 0;
+        width: 80%;
     }
 }
 
@@ -322,42 +451,36 @@ button[type="submit"] {
 
 
 
+/*-----------MEDIA QUERIES---------
+
+
+@media (max-width: 768px) and (min-width: 375px) {
+       .social-links {
+    padding-top: 50px;
+    padding-bottom: 15px;
+}
+}
+/*-----------MEDIA QUERIES---------
+
+@media (max-width: 992px) {
+    .center-form {
+        padding-top: 30px;
+        min-height: 375px;
+        margin: 0 auto;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+   .center-form {
+        padding-top: 30px;
+        min-height: 375px;
+        margin: 0 auto;
+        min-width: 850px;
+    }
+}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-*/

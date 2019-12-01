@@ -10,11 +10,130 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="assets/images/backround.png" type="text/css" />
+    <link rel="stylesheet" href="assets/cv/macResume.pdf" type="text/css" />
+    <link rel="stylesheet" href="assets/images/myCompTIA.png" type="text/css" />
 
 
 
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #myImg {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg:hover {
+            opacity: 0.7;
+        }
+
+        /* The Modal (background) */
+
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content (image) */
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image */
+
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation */
+
+        .modal-content,
+        #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+    </style>
 
     <title>User Centric Frontend Project I</title>
 </head>
@@ -27,10 +146,12 @@
 
 
 
-
     <nav>
         <div id="navbar">
-            <a href="index.1.html">Home</a>
+            <a href="index.1.html">
+                <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+                            <span class="sr-only">home</span>
+            </a>
             <a href="index.1.html#about">ABOUT</a>
             <a href="index.1.html#skills">SKILLS</a>
             <a class="active" href="#">MY WORK</a>
@@ -38,108 +159,137 @@
         </div>
     </nav>
 
+
+
+
     <section id="ContactHead">
-        <br><br><br><br>
+                                                       
 
         <div id="resume">
             <div class="col-sm-12" id="ContactHead">
                 <p>
                     Click to Download my Resume.
-                    <a href="/assets/images/backround.png" target="_blank" class="resume-DL fa fa-cv-pdf fa-5x-left fa-3x fa-pull-right fa-border ">
+                    <a href="assets/cv/macResume.pdf" target="_blank" class="resume-DL fa fa-cv-pdf fa-5x-left fa-3x fa-pull-right fa-border ">
                         <i class="fa fa-download" aria-hidden="true"></i>
                         <span class="sr-only">Download link.</span>
                         
                         
                         
                     </a>
-               
-                    
-                </p> 
+
+
+                </p>
             </div>
         </div>
         <br><br><br><br>
+        <img id="myImg" src="assets/images/myCompTIA.png" alt="CompTIA A+ Certification" style="width:100%;max-width:300px">
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+            
+        </div>
         <section>
 
-<br><br><br><br>
-        </section>
             <br><br><br><br>
+        </section>
+        <br><br><br><br>
     </section>
 
 
-    <div>
-        <div>
-            <div class="iPad">
-                
-            </div>
-        </div>
-    </div>
 
     <footer class="container-fluid">
         <br>
         <div class="col-sm-4">
-        <div id="footer-details" class="row">
-           <ul class="list-inline social-links">
+            <div id="footer-details" class="row">
+                <ul class="list-inline social-links">
                     <li class="list-inline-item">
                         <a target="" href="index.1.html">
                             <i class="fa fa-home" aria-hidden="true"></i>
                             <span class="sr-only">home</span>
                         </a>
                     </li>
-            </ul>
+                </ul>
             </div>
-            
-                
-              
-                
-            </div>
-            
-            
-            <div class="col-sm-4 text-center">
-                
-                            
 
-    
-        
-            
-                
-                
-                <ul class="list-inline social-links">
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://www.facebook.com/careers/areas-of-work/engineering/?teams[0]=Software%20Engineering">
+
+
+
+        </div>
+
+
+        <div class="col-sm-4 text-center">
+
+
+
+
+
+
+
+
+            <ul class="list-inline social-links">
+                <li class="list-inline-item">
+                    <a target="_blank" href="https://www.facebook.com/careers/areas-of-work/engineering/?teams[0]=Software%20Engineering">
                             <i class="fa fa-facebook" aria-hidden="true"></i>
                             <span class="sr-only">Facebook</span>
                         </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://twitter.com/CodersInstitute?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                </li>
+                <li class="list-inline-item">
+                    <a target="_blank" href="https://twitter.com/CodersInstitute?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
                             <i class="fa fa-twitter" aria-hidden="true"></i>
                             <span class="sr-only">Twitter</span>
                         </a>
-                    </li>
-                  
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://www.instagram.com/codeinstitute/?hl=en">
+                </li>
+
+                <li class="list-inline-item">
+                    <a target="_blank" href="https://www.instagram.com/codeinstitute/?hl=en">
                             <i class="fa fa-instagram" aria-hidden="true"></i>
                             <span class="sr-only">Instagram</span>
                         </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://www.youtube.com/results?search_query=web+development">
+                </li>
+                <li class="list-inline-item">
+                    <a target="_blank" href="https://www.youtube.com/results?search_query=web+development">
                             <i class="fa fa-youtube" aria-hidden="true"></i>
                             <span class="sr-only">YouTube</span>
                         </a>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="col-sm-4 text-center">
-                <h6>mac.midi.webdesigns@gmail.com</h6>
-            </div>
-            
+                </li>
+            </ul>
         </div>
-        
-        </footer>
 
+        <div class="col-sm-4 text-center">
+            <h6>mac.midi.webdesigns@gmail.com</h6>
+        </div>
+
+        </div>
+
+    </footer>
+
+
+
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
     <script type="text/javascript" src="assets/js/scripts.js"></script>
 
 </body>

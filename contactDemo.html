@@ -12,33 +12,23 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/images/backround.png">
 
-
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-
-    <title>User Centric Frontend Project II</title>
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-
-    <script type="text/javascript">
-        emailjs.init("user_5xqhSUnrkNe0PksQeRWva");
-
-        emailjs.send("gmail", "sendejs", {
-
-            "reply_to": "mac.midi.webdesigns@gmail.com",
-            "from_name": "TestTeacher",
-            "to_name": "Miguel Camacho",
-            "message_html": "testEMAILjs",
-            "fullname": "Miguel A... Camacho",
-            "emailaddress": "mcamacho1990@icloud.com",
-            "project_summary": "testEMAILJS******",
-            "to_email": "mcamacho1990@icloud.com",
-
-        });
+    <title>Contact Form</title>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js"></script>
+    
+     <script type="text/javascript">
+            emailjs.init("user_5xqhSUnrkNe0PksQeRWva");
     </script>
+
+
 
 </head>
 
+ 
 <body>
+   
+    
     <nav>
         <div id="navbar">
             <a href="index.1.html">
@@ -64,10 +54,19 @@
                 <div class="center-form">
 
                     <form onsubmit="return sendMail(this);">
-                        <input type="text" name="name" id="fullname" class="form-control" placeholder="Name" required />
-                        <input type="email" name="email" id="emailaddress" class="form-control" placeholder="Email" required />
-                        <textarea rows="9" name="projectsummary" id="projectsummary" class="form-control" placeholder="Provide your name and email we will let Email JS handel the rest." required></textarea>
+                        <input type="hidden" name="contact_number">
 
+                        <!-- <label>Name</label>-->
+                        <input type="text" name="name" id="fullname" class="form-control" placeholder="Name" required />
+                        <!--<input type="text" name="user_name">-->
+
+                        <!--<label>Email</label>-->
+                        <input type="email" name="email" id="emailaddress" class="form-control" placeholder="Email" required />
+                        <!--<input type="email" name="user_email">-->
+
+                        <!--<label>Message</label>-->
+                        <textarea rows="9" name="projectsummary" id="projectsummary" class="form-control" placeholder="Provide your name and email we will let Email JS handel the rest." required></textarea>
+                        <!--<textarea name="message"></textarea>-->
                         <div class="form-row text-center">
                             <div class="col text-center">
                                 <div id="bsend">
@@ -76,7 +75,9 @@
                             </div>
                         </div>
 
+
                     </form>
+
                 </div>
 
             </div>
@@ -104,6 +105,9 @@
                     </li>
                 </ul>
             </div>
+
+
+
 
         </div>
 
@@ -136,7 +140,6 @@
                             <span class="sr-only">YouTube</span>
                         </a>
                 </li>
-                <a href="{{url_for('edit_task', task_id=task._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
             </ul>
         </div>
 
@@ -149,11 +152,9 @@
     </footer>
 
 
-    <!--<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js"></script>-->
-
+    
     <script type="text/javascript" src="assets/js/scripts.js"></script>
     <script type="text/javascript" src="assets/js/sendEmail.js"></script>
-
 
 </body>
 
